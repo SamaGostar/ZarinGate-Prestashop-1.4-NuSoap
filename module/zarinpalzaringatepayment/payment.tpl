@@ -1,12 +1,12 @@
 <!-- Zarinpal Payment Module -->
 <p class="payment_module">
-    <a href="javascript:$('#zarinpalpayment_form').submit();" title="{l s='Pay by Zarinpal' mod='zarinpalpayment'}">
-        <img src="modules/zarinpalpayment/zarinpal.png" alt="{l s='Pay by Zarinpal' mod='zarinpalpayment'}" />
-		{l s='Pay by Debit/Credit card through Zarinpal Online Merchent.' mod='zarinpalpayment'}
+    <a href="javascript:$('#zarinpalzaringatepayment_form').submit();" title="{l s='Pay by Zarinpal' mod='zarinpalzaringatepayment'}">
+        <img src="modules/zarinpalzaringatepayment/zarinpal.png" alt="{l s='Pay by Zarinpal' mod='zarinpalzaringatepayment'}" />
+		{l s='Pay by Debit/Credit card through Zarinpal Online Merchent.' mod='zarinpalzaringatepayment'}
 <br>
 </a></p>
-<a class="exclusive_large" href="javascript:$('#zarinpalpayment_form').submit();" title="{l s='Pay by Zarinpal' mod='zarinpalpayment'}">{l s='Pay by Zarinpal' mod='zarinpalpayment'}</a>
-<form action="modules/zarinpalpayment/payment.php" method="post" id="zarinpalpayment_form" class="hidden">
+<a class="exclusive_large" href="javascript:$('#zarinpalzaringatepayment_form').submit();" title="{l s='Pay by Zarinpal' mod='zarinpalzaringatepayment'}">{l s='Pay by Zarinpal' mod='zarinpalzaringatepayment'}</a>
+<form action="modules/zarinpalzaringatepayment/payment.php" method="post" id="zarinpalzaringatepayment_form" class="hidden">
     <input type="hidden" name="orderId" value="{$orderId}" />
 </form>
 <br><br>
