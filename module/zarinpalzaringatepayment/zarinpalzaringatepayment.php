@@ -111,9 +111,9 @@ class zarinpalzaringatepayment extends PaymentModule{
 		return $this->_html;
 	}
 
-	private function displayZarinpalPayment()
+	private function displayzarinpalzaringatepayment()
 	{
-		$this->_html .= '<img src="../modules/zarinpalpayment/zarinpal.png" style="float:left; margin-right:15px;"><b>'.$this->l('This module allows you to accept payments by Zarinpal.').'</b><br /><br />
+		$this->_html .= '<img src="../modules/zarinpalzaringatepayment/zarinpal.png" style="float:left; margin-right:15px;"><b>'.$this->l('This module allows you to accept payments by Zarinpal.').'</b><br /><br />
 		'.$this->l('Any cart from Shetab Banks are accepted.').'<br /><br /><br />';
 
 	}
@@ -149,7 +149,7 @@ class zarinpalzaringatepayment extends PaymentModule{
 			$hash_data = 'o='.$cart->id.$PurchaseAmount;
 			$hash = crypt($hash_data, Configuration::get('ZARINPAL_HASHKEY'));			
 
-			$CpiReturnUrl = (Configuration::get('PS_SSL_ENABLED') ?'https://' :'http://').$_SERVER['HTTP_HOST'].__PS_BASE_URI__.'modules/zarinpalpayment/validation.php';
+			$CpiReturnUrl = (Configuration::get('PS_SSL_ENABLED') ?'https://' :'http://').$_SERVER['HTTP_HOST'].__PS_BASE_URI__.'modules/zarinpalzaringatepayment/validation.php';
 			
 		    $params = array(
 			array(
@@ -248,4 +248,4 @@ class zarinpalzaringatepayment extends PaymentModule{
 	}
 
 }  
-// End of: zarinpalpayment.php 
+// End of: zarinpalzaringatepayment.php 
