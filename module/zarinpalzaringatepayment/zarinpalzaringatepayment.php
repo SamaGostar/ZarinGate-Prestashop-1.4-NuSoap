@@ -1,6 +1,6 @@
 <?php  
 
-class zarinpalpayment extends PaymentModule{  
+class zarinpalzaringatepayment extends PaymentModule{  
 
 	private $_html = '';
 	private $_postErrors = array();
