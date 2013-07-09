@@ -1,22 +1,22 @@
-{capture name=path}{l s='Credit/Debit Card' mod='zarinpalpayment'}{/capture}
+{capture name=path}{l s='Credit/Debit Card' mod='zarinpalzaringatepayment'}{/capture}
 {include file=$tpl_dir./breadcrumb.tpl}
-<h2>{l s='Order summary' mod='zarinpalpayment'}</h2>
+<h2>{l s='Order summary' mod='zarinpalzaringatepayment'}</h2>
 
 {assign var='current_step' value='payment'}
 {include file=$tpl_dir./order-steps.tpl}
 
 {if $nbProducts <= 0}
-	<p class="warning">{l s='Your shopping cart is empty.' mod='zarinpalpayment'}</p>
+	<p class="warning">{l s='Your shopping cart is empty.' mod='zarinpalzaringatepayment'}</p>
 {else}
-<h3>{l s='Credit Card Payment' mod='zarinpalpayment'}</h3>
-<p><img src="{$this_path}zarinpal.png" alt="{l s='Zarinpal' mod='zarinpalpayment'}" style="float:left; margin: 0px 10px 5px 0px;" />
-	{l s='You have chosen to pay by credit or debit card through Zarinpal.' mod='zarinpalpayment'}</p>
+<h3>{l s='Credit Card Payment' mod='zarinpalzaringatepayment'}</h3>
+<p><img src="{$this_path}zarinpal.png" alt="{l s='Zarinpal' mod='zarinpalzaringatepayment'}" style="float:left; margin: 0px 10px 5px 0px;" />
+	{l s='You have chosen to pay by credit or debit card through Zarinpal.' mod='zarinpalzaringatepayment'}</p>
 <br />
-<p>{l s=' We accept the following currency via this method:' mod='zarinpalpayment'}&nbsp;<b>{l s=' IRR' mod='zarinpalpayment'}</b></p>
+<p>{l s=' We accept the following currency via this method:' mod='zarinpalzaringatepayment'}&nbsp;<b>{l s=' IRR' mod='zarinpalzaringatepayment'}</b></p>
 <br />
-<h3>{l s='Order Details:' mod='zarinpalpayment'}</h3>
+<h3>{l s='Order Details:' mod='zarinpalzaringatepayment'}</h3>
 <p style="margin-top:20px;">
-	{l s='The amount to be debited from your selected card is:' mod='zarinpalpayment'}
+	{l s='The amount to be debited from your selected card is:' mod='zarinpalzaringatepayment'}
 	<span id="amount" class="price">{$TotalAmount}</span>
 </p>
     <br />
@@ -35,14 +35,14 @@
     {/if}
 <br /><br />
 <p>
-	<b>{l s='Please confirm your order by clicking \'I confirm my order\'' mod='zarinpalpayment'}.</b>
+	<b>{l s='Please confirm your order by clicking \'I confirm my order\'' mod='zarinpalzaringatepayment'}.</b>
 </p>
 
-<!-- Please note if any of the variables are changed in zarinpalpayment.php they also have to defined below -->     
+<!-- Please note if any of the variables are changed in zarinpalzaringatepayment.php they also have to defined below -->     
 <form name="checkout_confirmation" action="{$form_url}" method="post">
 	<p class="cart_navigation">
-		<a href="{$base_dir_ssl}order.php?step=3" class="button_large">{l s='Other payment methods' mod='zarinpalpayment'}</a>
-			<input type="submit" name="submit" value="{l s='I confirm my order' mod='zarinpalpayment'}" class="exclusive_large" />
+		<a href="{$base_dir_ssl}order.php?step=3" class="button_large">{l s='Other payment methods' mod='zarinpalzaringatepayment'}</a>
+			<input type="submit" name="submit" value="{l s='I confirm my order' mod='zarinpalzaringatepayment'}" class="exclusive_large" />
 	</p>
 </form>  
 {/if}
