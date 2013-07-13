@@ -167,7 +167,7 @@ class zarinpalzaringatepayment extends PaymentModule{
 			$OrderId = intval($OrderId)-1;
 
             //--------------------------------
-            if($res['Status'] == 100 ){
+            if($res->Status == 100 ){
          	   // this is a succcessfull connection
 	           //saving order information
 	           setcookie("ZARINPAL_HASH", $hash, time()+1800);
@@ -175,13 +175,13 @@ class zarinpalzaringatepayment extends PaymentModule{
 	           setcookie("PurchaseAmount", $PurchaseAmount, time()+1800);
                        
                //redirecting 
-			   $ParsURL = "https://www.zarinpal.com/pg/StartPay/" . $res['Authority]' . "/ZarinGate";
+			   $ParsURL = "https://www.zarinpal.com/pg/StartPay/" . $res->Authority . "/ZarinGate";
 			   Tools::redirectLink($ParsURL);
 			   exit() ;
 			   die() ;
 			   return;
      		}else{
-				echo 'کد خطا: '.$res['Status'];
+				echo 'کد خطا: '.$res->Status;
 			}
            
         }	
@@ -213,7 +213,7 @@ class zarinpalzaringatepayment extends PaymentModule{
 				$res = $soapclient->call('PaymentVerification', $params);
 			}
 		}
-		return $res['status'];			
+		return $res->status;			
 	}
 		
 	public function showMessages($result)
