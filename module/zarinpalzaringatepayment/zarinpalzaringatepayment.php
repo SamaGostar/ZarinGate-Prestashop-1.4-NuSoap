@@ -124,7 +124,7 @@ class zarinpalzaringatepayment extends PaymentModule{
 		global $cookie, $smarty;
 
 
-  		$soapclient = new nusoap_client('https://www.zarinpal.com/pg/services/WebGate/wsdl','wsdl');
+  		$soapclient = new nusoap_client('https://de.zarinpal.com/pg/services/WebGate/wsdl','wsdl');
 		if (!$err = $soapclient->getError())
 		   $soapProxy = $soapclient->getProxy() ;
 		if ( (!$soapclient) OR ($err = $soapclient->getError()) ) {
@@ -193,7 +193,7 @@ class zarinpalzaringatepayment extends PaymentModule{
 		$Status = $_REQUEST['Status'];
 
 		if ( $Status == "OK" ) {
-			$soapclient = new nusoap_client('https://www.zarinpal.com/pg/services/WebGate/wsdl','wsdl');
+			$soapclient = new nusoap_client('https://de.zarinpal.com/pg/services/WebGate/wsdl','wsdl');
 			if ( (!$soapclient) OR ($err = $soapclient->getError()) ) {
 				// this is unsucccessfull connection
 				$this->_postErrors[] = $this->l($err);
