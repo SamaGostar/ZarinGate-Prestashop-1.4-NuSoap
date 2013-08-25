@@ -25,7 +25,7 @@ include_once(dirname(__FILE__).'/zarinpalzaringatepayment.php');
 	$hash_data = 'o='.$_COOKIE["OrderId"].$_COOKIE["PurchaseAmount"];
 	$hash = crypt($hash_data, Configuration::get('ZARINPAL_HASHKEY'));
 	
-	if (($result==1) and ($hash==$_COOKIE["ZARINPAL_HASH"]))
+	if (($result==100) and ($hash==$_COOKIE["ZARINPAL_HASH"]))
 	{
 		if($PurchaseAmount==$OrderAmount)
 			 $zarinpalzaringatepayment->validateOrder(intval($_COOKIE["OrderId"]), _PS_OS_PAYMENT_,$order_cart->getOrderTotal(true, 3), $zarinpalzaringatepayment->displayName, $zarinpalzaringatepayment->l('Payment Accepted'), array(), $cookie->id_currency);
@@ -38,6 +38,8 @@ include_once(dirname(__FILE__).'/zarinpalzaringatepayment.php');
         setcookie("PurchaseAmount","", -1);
  		
         Tools::redirect('history.php');
+	}else{
+		'ERR: '.$redult;
 	}
 
 include_once(dirname(__FILE__).'/../../footer.php');		
